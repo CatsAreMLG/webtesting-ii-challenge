@@ -45,6 +45,7 @@ class App extends Component {
         <Dashboard
           handleReset={this.handleReset}
           handlePitch={this.handlePitch}
+          score={this.state}
         />
         <Display score={this.state} />
       </div>
