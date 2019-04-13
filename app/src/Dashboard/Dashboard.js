@@ -13,26 +13,34 @@ const Dashboard = ({ score, handlePitch, handleReset }) => {
     <div className="buttonContainer">
       <div
         className="button"
-        style={score.strikes === 3 || score.balls === 4 ? disabled : null}
-        onClick={score.strikes === 3 || score.balls === 4 ? null : handleClick}>
+        style={score.struckOut || score.walked || score.hit ? disabled : null}
+        onClick={
+          score.struckOut || score.walked || score.hit ? null : handleClick
+        }>
         Hit
       </div>
       <div
         className="button"
-        style={score.strikes === 3 || score.balls === 4 ? disabled : null}
-        onClick={score.strikes === 3 || score.balls === 4 ? null : handleClick}>
+        style={score.struckOut || score.walked || score.hit ? disabled : null}
+        onClick={
+          score.struckOut || score.walked || score.hit ? null : handleClick
+        }>
         Foul
       </div>
       <div
         className="button"
-        style={score.strikes === 3 || score.balls === 4 ? disabled : null}
-        onClick={score.strikes === 3 || score.balls === 4 ? null : handleClick}>
+        style={score.struckOut || score.walked || score.hit ? disabled : null}
+        onClick={
+          score.struckOut || score.walked || score.hit ? null : handleClick
+        }>
         Strike
       </div>
       <div
         className="button"
-        style={score.strikes === 3 || score.balls === 4 ? disabled : null}
-        onClick={score.strikes === 3 || score.balls === 4 ? null : handleClick}>
+        style={score.struckOut || score.walked || score.hit ? disabled : null}
+        onClick={
+          score.struckOut || score.walked || score.hit ? null : handleClick
+        }>
         Ball
       </div>
       <div className="button" onClick={handleReset}>

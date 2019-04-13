@@ -4,7 +4,9 @@ const Display = ({ score }) => {
   return (
     <div>
       Strikes: {score.strikes || 0}, Balls: {score.balls || 0}
-      {score.hit ? ' hit!' : null}
+      {score.hit ? <div>Hit!</div> : null}
+      {score.walked ? <div>Walked!</div> : null}
+      {score.struckOut ? <div>Struck Out!</div> : null}
     </div>
   )
 }

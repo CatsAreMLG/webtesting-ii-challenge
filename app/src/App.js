@@ -34,7 +34,7 @@ class App extends Component {
       this.setState({ strikes: 3, struckOut: true })
     if (name === 'ball' && this.state.balls < 3)
       this.setState(prevState => ({ balls: prevState.balls + 1 }))
-    if (name === 'ball' && this.state.balls === 4)
+    if (name === 'ball' && this.state.balls === 3)
       this.setState({ balls: 4, walked: true })
     if (name === 'foul' && this.state.strikes < 2)
       this.setState(prevState => ({ strikes: prevState.strikes + 1 }))
