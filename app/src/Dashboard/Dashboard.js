@@ -6,13 +6,14 @@ const Dashboard = ({ score, handlePitch, handleReset }) => {
     cursor: 'not-allowed'
   }
   const handleClick = e => {
-    const name = e.target.innerText.toLowerCase()
+    const name = e.target.name
     handlePitch(name)
   }
   return (
     <div className="buttonContainer">
       <div
         className="button"
+        name="hit"
         style={score.struckOut || score.walked || score.hit ? disabled : null}
         onClick={
           score.struckOut || score.walked || score.hit ? null : handleClick
@@ -21,6 +22,7 @@ const Dashboard = ({ score, handlePitch, handleReset }) => {
       </div>
       <div
         className="button"
+        name="foul"
         style={score.struckOut || score.walked || score.hit ? disabled : null}
         onClick={
           score.struckOut || score.walked || score.hit ? null : handleClick
@@ -29,6 +31,7 @@ const Dashboard = ({ score, handlePitch, handleReset }) => {
       </div>
       <div
         className="button"
+        name="strike"
         style={score.struckOut || score.walked || score.hit ? disabled : null}
         onClick={
           score.struckOut || score.walked || score.hit ? null : handleClick
@@ -37,6 +40,7 @@ const Dashboard = ({ score, handlePitch, handleReset }) => {
       </div>
       <div
         className="button"
+        name="ball"
         style={score.struckOut || score.walked || score.hit ? disabled : null}
         onClick={
           score.struckOut || score.walked || score.hit ? null : handleClick
