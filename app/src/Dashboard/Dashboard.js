@@ -6,11 +6,22 @@ const Dashboard = props => {
     props.handlePitch(name)
   }
   return (
-    <div>
-      <div onClick={handleClick}>Hit</div>
-      <div onClick={handleClick}>Foul</div>
-      <div onClick={handleClick}>Strike</div>
-      <div onClick={handleClick}>Ball</div>
+    <div className="buttonContainer">
+      <div className="button" onClick={handleClick}>
+        Hit
+      </div>
+      <div className="button" onClick={handleClick}>
+        Foul
+      </div>
+      <div className="button" onClick={handleClick}>
+        Strike
+      </div>
+      <div className="button" onClick={handleClick}>
+        Ball
+      </div>
+      <div className="button" onClick={props.handleReset}>
+        Next Batter
+      </div>
     </div>
   )
 }
