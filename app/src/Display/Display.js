@@ -6,8 +6,8 @@ const Display = ({ score }) => {
       <span>Strikes: {score.strikes || 0}</span>,{' '}
       <span>Balls: {score.balls || 0}</span>
       {score.hit ? <div>Hit!</div> : null}
-      {score.walked ? <div>Walked!</div> : null}
-      {score.struckOut ? <div>Struck Out!</div> : null}
+      {score.walked ? <div data-testid="walked">Walked!</div> : null}
+      {score.struckOut ? <div data-testid="strikeout">Struck Out!</div> : null}
     </div>
   )
 }

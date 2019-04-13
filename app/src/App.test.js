@@ -35,4 +35,25 @@ it('displays strikes and balls', async () => {
   expect(strikes.innerHTML).toEqual('Strikes: 3')
   const balls = await waitForElement(() => getByText(/balls: /i))
   expect(balls.innerHTML).toEqual('Balls: 2')
+  cleanup()
+})
+it('displays strikeouts', async () => {
+  const { getByText, getByTestId } = render(
+    <Display
+      score={{
+        strike: false,
+        ball: false,
+        hit: false,
+        foul: false,
+        struckOut: true,
+        walked: true,
+        strikes: 3,
+        balls: 4
+      }}
+    />
+  )
+  const strikeout = await waitForElement(() => getByTestId('strikeout'))
+  expect(strikeout.innerHTML).toEqual('Struck Out!')
+  const walk = await waitForElement(() => getByTestId('walked'))
+  expect(walk.innerHTML).toEqual('Walked!')
 })
